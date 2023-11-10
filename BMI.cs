@@ -8,17 +8,26 @@ namespace BMI_Calculator
 {
     public class BMI
     {
-
+        List<BMI> list = new List<BMI>();
         private double MassKg { get; set; }
 
-        private double Growth { get; set; }
+        private double GrowthM { get; set; }
 
         public BMI(double massKg, double growth)
         {
             MassKg = massKg;
-            Growth = growth;
+            GrowthM = growth;
+
+            Program.newPerson
+
+
+            var newPerson = new BMI(massKg, growth);
+            list.Add(newPerson);
         }
 
-
+        public void AddToList(BMI new)
+        {
+            Console.WriteLine("testowa metoda");
+        }
     }
 }
