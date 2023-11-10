@@ -18,16 +18,17 @@ namespace BMI_Calculator
             MassKg = massKg;
             GrowthM = growth;
 
-            Program.newPerson
+            //Program.newPerson
 
 
-            var newPerson = new BMI(massKg, growth);
-            list.Add(newPerson);
+            //var newPerson = new BMI(massKg, growth);
+            //list.Add(newPerson);
         }
 
-        public void AddToList(BMI new)
+        public void AddToList(BMI newPerson)
         {
-            Console.WriteLine("testowa metoda");
+            list.Add(newPerson);
+            Console.WriteLine("Informacja: dodano nowy pomiar do listy");
         }
     }
 }

@@ -12,8 +12,7 @@ namespace BMI_Calculator
             double x = 0;
             double y = 0;
 
-            BMI bmi = new BMI(x, y);
-            //List<BMI> list = new List<BMI>();
+            BMI bmi = new BMI(x,y);
 
             Console.WriteLine("Podaj swoją masę [kg]");
             var mass = Convert.ToDouble(Console.ReadLine());
@@ -23,10 +22,14 @@ namespace BMI_Calculator
 
             var newPerson = new BMI(mass, growth);
 
-            bmi.
+            bmi.AddToList(newPerson);
 
             double bmiIndex = mass / (growth * growth);
-            Console.WriteLine("\nTwój index BMI wynosi: " + bmiIndex);
+            Console.WriteLine("\nTwój index BMI wynosi: " + String.Format("{0:N2}", bmiIndex));
+
+
+            Console.Write("A to oznacza: "  );
+            var calculator = new Calculator(bmiIndex);
 
 
         }
